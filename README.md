@@ -87,7 +87,7 @@ python manage.py runserver
 
 ---
 
-## ✨ Autor
+## Autor
 
 **Rafael Domiciano Maia Mateus** — Desenvolvedor Web e estudante apaixonado por Python, Django e interfaces modernas.
 
