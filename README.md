@@ -48,6 +48,7 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 ```
 FinManager/
 ├── finmanager/        # Configurações gerais do Django
+├── main/
 ├── users/             # App de autenticação e perfis
 ├── dashboard/         # App da homepage e widgets
 ├── static/            # CSS, JS e imagens
