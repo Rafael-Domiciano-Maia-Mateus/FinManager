@@ -20,7 +20,6 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 
 ### 🔧 Em desenvolvimento
 
-* Cadastro de transações
 * Gráficos estatísticos
 * Tela de perfil
 * Sistema de categorias
