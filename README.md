@@ -4,11 +4,15 @@ Um sistema de gestão financeira pessoal desenvolvido com Django, com foco em si
 
 ---
 
-![Tela de Login](assets/login.png)
-![Tela de Criação de contas](assets/CreateAccount.png)
-![Homepage](assets/homepage.png)
-![Dashboard](assets/dashboard.png)
-![Adicionar gastos](assets/addExpense.png)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+
+  <img src="assets/login.png" alt="Tela de Login" width="200"/>
+  <img src="assets/CreateAccount.png" alt="Tela de Criação de contas" width="200"/>
+  <img src="assets/homepage.png" alt="Homepage" width="200"/>
+  <img src="assets/dashboard.png" alt="Dashboard" width="200"/>
+  <img src="assets/addExpense.png" alt="Adicionar gastos" width="200"/>
+
+</div>
 
 ---
 
