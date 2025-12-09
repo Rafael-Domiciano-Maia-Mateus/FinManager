@@ -2,15 +2,17 @@
 
 Um sistema de gestão financeira pessoal desenvolvido com Django, com foco em simplicidade, segurança e visual moderno. O projeto ainda está em desenvolvimento, mas já possui estrutura organizada para futuras funcionalidades como controle de gastos, gráficos interativos, login seguro e funcionalidades financeiras mais avançadas (planejadas).
 
-<div style="display: flex; gap: 10px; margin-bottom: 10px;">
-  <img src="assets/login.png" alt="Tela de Login" width="45%"/>
-  <img src="assets/CreateAccount.png" alt="Tela de Criação de contas" width="45%"/>
+---
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px;">
+  <img src="assets/login.png" alt="Tela de Login" style="width:49%; object-fit: cover;"/>
+  <img src="assets/CreateAccount.png" alt="Tela de Criação de contas" style="width:49%; object-fit: cover;"/>
 </div>
 
-<div style="display: flex; gap: 10px;">
-  <img src="assets/homepage.png" alt="Homepage" width="32%"/>
-  <img src="assets/dashboard.png" alt="Dashboard" width="32%"/>
-  <img src="assets/addExpense.png" alt="Adicionar gastos" width="32%"/>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+  <img src="assets/homepage.png" alt="Homepage" style="width:32%; object-fit: cover;"/>
+  <img src="assets/dashboard.png" alt="Dashboard" style="width:32%; object-fit: cover;"/>
+  <img src="assets/addExpense.png" alt="Adicionar gastos" style="width:32%; object-fit: cover;"/>
 </div>
 
 ---
