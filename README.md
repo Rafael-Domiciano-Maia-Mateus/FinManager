@@ -14,31 +14,39 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 
 ### ✔ Já implementadas
 
-* Sistema de autenticação (login/logout)
-* Estrutura base do layout com sidebar e dashboard
-* Organização das rotas e apps
+- Sistema de autenticação (login/logout)
+- Estrutura base do layout com sidebar e dashboard
+- Organização das rotas e apps
 
 ### 🔧 Em desenvolvimento
 
+<<<<<<< HEAD
 * Gráficos estatísticos
 * Tela de perfil
 * Sistema de categorias
 * API interna (planejada)
+=======
+- Cadastro de transações
+- Gráficos estatísticos
+- Tela de perfil
+- Sistema de categorias
+- API interna (planejada)
+>>>>>>> cecb92f (atualizacao no views do dashboard)
 
 ### Futuras melhorias
 
-* Dashboard com IA explicando seus gastos
-* Exportação de relatórios (PDF/CSV)
-* Modo dark automático
+- Dashboard com IA explicando seus gastos
+- Exportação de relatórios (PDF/CSV)
+- Modo dark automático
 
 ---
 
 ## Tecnologias Utilizadas
 
-* **Python 3.12+**
-* **Django 5.2**
-* **HTML5 / CSS3 / JS**
-* **SQLite (dev)**
+- **Python 3.12+**
+- **Django 5.2**
+- **HTML5 / CSS3 / JS**
+- **SQLite (dev)**
 
 ---
 
@@ -87,7 +95,11 @@ python manage.py runserver
 
 ---
 
+<<<<<<< HEAD
 ## Autor
+=======
+## ✨ Autor
+>>>>>>> cecb92f (atualizacao no views do dashboard)
 
 **Rafael Domiciano Maia Mateus** — Desenvolvedor Web e estudante apaixonado por Python, Django e interfaces modernas.
 
