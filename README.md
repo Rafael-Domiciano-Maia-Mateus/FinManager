@@ -4,6 +4,14 @@ Um sistema de gestão financeira pessoal desenvolvido com Django, com foco em si
 
 ---
 
+![Tela de Login](assets/login.png)
+![Tela de Criação de contas](assets/CreateAccount.png)
+![Homepage](assets/homepage.png)
+![Dashboard](assets/dashboard.png)
+![Adicionar gastos](assets/addExpense.png)
+
+---
+
 ## Objetivo do Projeto
 
 O FinManager tem como propósito oferecer uma plataforma de controle financeiro intuitiva e eficiente, permitindo que o usuário acompanhe entradas, saídas, saldo geral e visualize gráficos de desempenho mensal.
