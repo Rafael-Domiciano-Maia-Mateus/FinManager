@@ -88,15 +88,6 @@ python manage.py runserver
 
 ---
 
-## 🧪 Como contribuir (se for público)
-
-* Faça um fork
-* Crie uma branch
-* Faça melhorias
-* Envie um PR
-
----
-
 ## ✨ Autor
 
 **Rafael Domiciano Maia Mateus** — Desenvolvedor Web e estudante apaixonado por Python, Django e interfaces modernas.
