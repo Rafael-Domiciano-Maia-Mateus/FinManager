@@ -102,6 +102,6 @@ python manage.py runserver
 
 ## Autor
 
-**Rafael Domiciano Maia Mateus** — Desenvolvedor Web e estudante apaixonado por Python, Django e interfaces modernas.
+**Rafael Domiciano Maia Mateus** — Programador em formação | Python, Django, JavaScript | Automação e desenvolvimento web
 
 LinkedIn: [https://www.linkedin.com/in/rafael-maia-26b41a308](https://www.linkedin.com/in/rafael-maia-26b41a308)
