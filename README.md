@@ -1,6 +1,6 @@
 # FinManager
 
-Um sistema de gestão financeira pessoal desenvolvido com **Django**, com foco em simplicidade, segurança e visual moderno. O projeto ainda está em desenvolvimento, mas já possui estrutura organizada para futuras funcionalidades como controle de gastos, gráficos interativos, login seguro e funcionalidades financeiras mais avançadas (planejadas).
+Um sistema de gestão financeira pessoal desenvolvido com Django, com foco em simplicidade, segurança e visual moderno. O projeto ainda está em desenvolvimento, mas já possui estrutura organizada para futuras funcionalidades como controle de gastos, gráficos interativos, login seguro e funcionalidades financeiras mais avançadas (planejadas).
 
 ---
 
@@ -10,7 +10,7 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 
 ---
 
-## Funcionalidades (atual e futuras)
+## 📌 Funcionalidades (atual e futuras)
 
 ### ✔ Já implementadas
 
@@ -20,18 +20,10 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 
 ### 🔧 Em desenvolvimento
 
-<<<<<<< HEAD
-* Gráficos estatísticos
-* Tela de perfil
-* Sistema de categorias
-* API interna (planejada)
-=======
-- Cadastro de transações
 - Gráficos estatísticos
 - Tela de perfil
 - Sistema de categorias
 - API interna (planejada)
->>>>>>> cecb92f (atualizacao no views do dashboard)
 
 ### Futuras melhorias
 
@@ -95,12 +87,8 @@ python manage.py runserver
 
 ---
 
-<<<<<<< HEAD
-## Autor
-=======
 ## ✨ Autor
->>>>>>> cecb92f (atualizacao no views do dashboard)
 
 **Rafael Domiciano Maia Mateus** — Desenvolvedor Web e estudante apaixonado por Python, Django e interfaces modernas.
 
-LinkedIn: [www.linkedin.com/in/rafael-maia-26b41a308)
+LinkedIn: [https://www.linkedin.com/in/rafael-maia-26b41a308](https://www.linkedin.com/in/rafael-maia-26b41a308)
