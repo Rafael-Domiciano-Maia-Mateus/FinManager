@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="profile-box">
+          <div class="profile-image"></div>
+          <span class="profile-name">{{ request.user.username }}</span>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="{% url 'dashboard' %}" class="menu-btn">Dashboard</a>
+          <a href="{% url 'add_expense' %}" class="menu-btn">Add Expense</a>
+          <a href="#" class="menu-btn">Categories</a>
+        </nav>
+      </aside>
+
+      <!-- FORM -->
+      <section class="expense-list">
+        <h2>Add Expense</h2>
+
+        <form method="post" class="expense-form">
+          {% csrf_token %}
+
+          <label>Title:</label>
+          {{ form.title }}
+
+          <label>Amount (R$):</label>
+          {{ form.amount }}
+
+          <label>Category:</label>
+          {{ form.category }}
+
+          <button type="submit" class="menu-btn">Save</button>
+        </form>
+      </section>
+
+      <section class="expense-chart"></section>
+    </div>
+  </body>
+</html>

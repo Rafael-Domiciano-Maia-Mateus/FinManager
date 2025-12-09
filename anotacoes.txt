@@ -1,0 +1,30 @@
+Site controle de gastos
+
+Problema a ser resolvido:
+- O foco desse projeto é ajudar as pessoas a controlar a entrada de dinheiro e garantir uma melhor administração
+de seu dinheiro.
+
+Meio para resolver o problema:
+- Desenvolver um site (inicialmente) no qual o usuário possa colocar seus gastos e caso queira, colocar o valor de seu salário 
+para ver o quanto ainda tem sobrando.
+
+O que deve ter na Web:
+- Login (Login, Logout, Registro de contas, Recuperação de senha);
+- Dashboards (Gastos, Faturamento);
+- Listas de gastos;
+- Lista de ganhos;
+- Diferentes planos de assinatura;
+  - Plano de R$ 0,00:
+    - Apenas lista de gastos;
+    - Apenas lista de ganhos;
+  - Plano de R$ 4,00 até R$ 15,00:
+    - Dashboards completos;
+    - Notificação no email;
+
+Linguagens e tecnologias a serem usadas no projeto:
+- Python:
+  - Django;
+  - os;
+  - json;
+- HTML & CSS;
+- JavaScript;

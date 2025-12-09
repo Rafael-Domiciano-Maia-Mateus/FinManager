@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinManager - Register Account</title>
+    <link rel="stylesheet" href="{% static 'css/registerAccount.css' %}" />
+  </head>
+  <body>
+    <main class="regiserAccount">
+      <h1 class="title">Create Account</h1>
+
+      <form action="" method="POST" class="registerForm">
+        {% csrf_token %}
+
+        <label class="label" for="username">Username</label>
+        <input class="input" type="text" name="username" id="username" placeholder="Username" />
+
+        <label class="label" for="email">E-mail</label>
+        <input class="input" type="email" name="email" id="email" placeholder="E-mail" />
+
+        <label class="label" for="phone">Phone Number</label>
+        <input class="input" type="text" name="phone" id="phone" placeholder="(xx) xxxxx-xxxx" />
+
+        <label class="label" for="password">Password</label>
+        <input class="input" type="password" name="password" id="password" placeholder="Password" />
+
+        <label class="label" for="confirmPassword">Confirm Password</label>
+        <input
+          class="input"
+          type="password"
+          name="confirm_password"
+          id="confirmPassword"
+          placeholder="Confirm your password"
+        />
+
+        <button class="btn" type="submit">Confirm</button>
+
+        <a href="{% url 'LoginView' %}" class="link">Already have an account? Login</a>
+      </form>
+    </main>
+  </body>
+</html>
