@@ -9,12 +9,10 @@
   <body>
     <a href="{% url 'LogoutAccount' %}" class="logout-btn">Logout</a>
 
-      <!-- MAIN CONTENT -->
       <main class="home-main">
         <h1 class="welcome-title">Welcome Back, {{ request.user.username }} 👋</h1>
         <p class="subtitle">Here’s a quick overview of your financial activity.</p>
 
-        <!-- CARDS DE RESUMO -->
         <section class="summary-grid">
           <div class="summary-card">
             <h3>Total Spent This Month</h3>
@@ -32,7 +30,6 @@
           </div>
         </section>
 
-        <!-- AÇÕES PRINCIPAIS -->
         <section class="action-grid">
           <a href="{% url 'add_expense' %}" class="action-card">
             <h2>Add New Expense</h2>

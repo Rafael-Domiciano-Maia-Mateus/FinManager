@@ -1,7 +1,3 @@
-/* ============================================================
-   RESET PROFISSIONAL
-============================================================ */
-
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +16,6 @@ body {
   color: #e2e8f0;
   overflow-x: hidden;
 }
-
-/* ============================================================
-   BOTÃO DE LOGOUT — CANTO SUPERIOR DIREITO
-============================================================ */
 
 .logout-btn {
   position: fixed;
@@ -50,7 +42,6 @@ body {
   box-shadow: 0 0 12px #3b82f6dd;
 }
 
-/* Remove decorações padrões */
 a {
   color: inherit;
   text-decoration: none;
@@ -61,42 +52,28 @@ li {
   list-style: none;
 }
 
-/* Melhora fontes em telas */
 body,
 input,
 button {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ============================================================
-   HOME MAIN — OCUPA A TELA E SE ADAPTA AO TAMANHO
-============================================================ */
-
 .home-main {
   width: 100%;
   min-height: 100vh;
-  padding: clamp(20px, 4vw, 45px); /* responsivo */
-
+  padding: clamp(20px, 4vw, 45px);
   background: radial-gradient(circle at top left, #1a1f33 0%, #0f1320 70%);
   animation: fadeIn 0.7s ease forwards;
-
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* ============================================================
-   HEADINGS
-============================================================ */
-
 .welcome-title {
   font-size: clamp(1.4rem, 4vw, 2.6rem);
   font-weight: 800;
-
   background: linear-gradient(90deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
   color: transparent;
-
   animation: slideIn 0.6s ease;
 }
 
@@ -106,15 +83,9 @@ button {
   margin-bottom: 5px;
 }
 
-/* ============================================================
-   SUMMARY GRID — TOTALMENTE ADAPTÁVEL
-============================================================ */
-
 .summary-grid {
   display: grid;
   gap: 20px;
-
-  /* Responsivo automático */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
@@ -147,15 +118,9 @@ button {
   color: #06b6d4;
 }
 
-/* ============================================================
-   ACTION GRID — ALTAMENTE RESPONSIVO
-============================================================ */
-
 .action-grid {
   display: grid;
   gap: 20px;
-
-  /* Se adapta *sozinho* à tela */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
@@ -163,11 +128,9 @@ button {
   background: #171c2b;
   padding: clamp(18px, 2.2vw, 28px);
   border-radius: 16px;
-
   box-shadow: inset 0 0 12px #0005;
   transition: 0.3s ease;
   cursor: pointer;
-
   animation: fadeIn 0.7s ease forwards;
 }
 
@@ -181,10 +144,6 @@ button {
   font-size: clamp(1.1rem, 2.2vw, 1.5rem);
   margin-bottom: 4px;
 }
-
-/* ============================================================
-   ANIMAÇÕES
-============================================================ */
 
 @keyframes fadeIn {
   from {
