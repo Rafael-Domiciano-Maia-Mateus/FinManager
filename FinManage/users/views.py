@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.db import IntegrityError
@@ -92,3 +93,15 @@ class LogoutView(View):
   def get(self, request):
     logout(request)
     return redirect('LoginView')
+
+
+class Account(LoginRequiredMixin, View):
+  template_name = "account.html"
+
+  def get(self, request):
+    conta = Users.objects.get(user=request.user)
+    context = {
+      'conta': conta
+    }
+    return render(request, self.template_name, context)
+    
