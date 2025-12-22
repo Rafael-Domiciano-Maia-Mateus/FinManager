@@ -8,6 +8,7 @@
   </head>
   <body>
     <a href="{% url 'LogoutAccount' %}" class="logout-btn">Logout</a>
+    <a href="{% url 'account' %}" class="account-btn">Account</a>
 
       <main class="home-main">
         <h1 class="welcome-title">Welcome Back, {{ request.user.username }} 👋</h1>

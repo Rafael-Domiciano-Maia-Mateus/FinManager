@@ -5,6 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FinManage - Account</title>
+    <link rel="stylesheet" href="{% static 'css/account.css' %}" />
   </head>
-  <body></body>
+  <body>
+    <a href="{% url 'homepage' %}" class="go-back">homepage</a>
+    <main class="account-dashboard">
+      <h2>FinManage</h2>
+      <p class="account">Username: {{ conta.user.username }}</p>
+      <p class="account">E-mail: {{ conta.user.email }}</p>
+      <p class="account">Phone Number: {{ conta.phone_numbers }}</p>
+      <p class="account">ID: {{ conta.id }}</p>
+    </main>
+  </body>
 </html>
