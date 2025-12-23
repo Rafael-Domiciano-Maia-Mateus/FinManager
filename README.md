@@ -36,13 +36,12 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 ### 🔧 Em desenvolvimento
 
 - Gráficos estatísticos
-- API interna (planejada)
 
 ### Futuras melhorias
 
 - Dashboard com IA explicando seus gastos
 - Exportação de relatórios (PDF/CSV)
-- Modo dark automático
+- API interna
 
 ---
 
