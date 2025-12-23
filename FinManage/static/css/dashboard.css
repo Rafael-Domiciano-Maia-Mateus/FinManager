@@ -257,3 +257,22 @@ body {
 .expense-form button {
   margin-top: 10px;
 }
+
+.chart-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.chart-controls button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #1f2937;
+  color: #fff;
+}
+
+.chart-controls button:hover {
+  background: #2563eb;
+}

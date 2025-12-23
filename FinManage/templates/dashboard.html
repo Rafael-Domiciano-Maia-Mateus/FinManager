@@ -39,13 +39,23 @@
 
       <section class="expense-chart">
         <h2>Analytics</h2>
-        <canvas id="expenseChart"></canvas>
+
+        <div class="chart-controls">
+          <button data-type="bar">Bar</button>
+          <button data-type="line">Line</button>
+          <button data-type="pie">Pie</button>
+        </div>
+
+        <div class="chart-wrapper">
+          <canvas id="expenseChart"></canvas>
+        </div>
       </section>
     </div>
 
     {{ labels|json_script:"labels-data" }} {{ values|json_script:"values-data" }}
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="{% static 'js/dashboard.js' %}"></script>
   </body>
 </html>
