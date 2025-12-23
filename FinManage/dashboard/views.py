@@ -1,7 +1,10 @@
+from django.shortcuts import render, redirect
+from django.views import View
 from django.views.generic import TemplateView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.db.models import Sum
+from django.db.models.functions import Lower
 from .models import Expense
 
 # Create your views here.
@@ -33,4 +36,24 @@ class ExpenseCreateView(LoginRequiredMixin, CreateView):
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
+  
+
+class manageCategories(LoginRequiredMixin, View):
+  template_name = "manageCategories.html"
+
+  def get(self, request):
+    expenses_by_category = (
+      Expense.objects
+      .filter(user=request.user)
+      .annotate(category_lower=Lower('category'))
+      .values('category_lower')
+      .annotate(total=Sum('amount'))
+      .order_by('category_lower')
+    )
+    
+    context = {
+      'expenses_by_category': expenses_by_category
+    }
+    
+    return render(request, self.template_name, context)
   

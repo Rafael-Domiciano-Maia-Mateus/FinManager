@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #0d101b;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e2e8f0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.go-back,
+.dashboardBtn,
+.newExpenseBtn {
+  position: fixed;
+  padding: 10px 18px;
+  background: #1a1f33;
+  color: #e2e8f0;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #0006;
+  border: 1px solid #3b82f6aa;
+  transition: 0.3s ease;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.go-back {
+  top: 20px;
+  left: 25px;
+}
+
+.dashboardBtn {
+  top: 20px;
+  right: 25px;
+}
+
+.newExpenseBtn {
+  top: 70px;
+  right: 25px;
+}
+
+.go-back:hover,
+.dashboardBtn:hover,
+.newExpenseBtn:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px #3b82f6dd;
+}
+
+.manage {
+  min-height: 100vh;
+  width: 100%;
+  padding: clamp(20px, 4vw, 45px);
+  padding-top: 120px; /* espaço para botões fixos */
+  background: radial-gradient(circle at top left, #1a1f33 0%, #0f1320 70%);
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.manage ul {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  list-style: none;
+}
+
+.manage li {
+  background: #171c2b;
+  padding: clamp(16px, 2vw, 24px);
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px #0005;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.manage li:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px #3b82f6aa;
+}
+
+.manage li::after {
+  content: "";
+}
+
+.manage li:only-child {
+  text-align: center;
+  font-weight: 500;
+  color: #94a3b8;
+  cursor: default;
+}
+
+.manage li:only-child:hover {
+  background: #171c2b;
+  transform: none;
+  box-shadow: inset 0 0 12px #0005;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

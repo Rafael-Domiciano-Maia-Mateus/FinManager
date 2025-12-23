@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinManage - Manage Categories</title>
+    <link rel="stylesheet" href="{% static 'css/manageCategories.css' %}" />
+  </head>
+  <body>
+    <a href="{% url 'homepage' %}" class="go-back">Homepage</a>
+    <a href="{% url 'dashboard' %}" class="dashboardBtn">Dashboard</a>
+    <a href="{% url 'add_expense' %}" class="newExpenseBtn">New Expense</a>
+    <main class="manage">
+      <ul>
+        {% for item in expenses_by_category %}
+        <li>{{ item.category_lower|capfirst }} — R$ {{ item.total }}</li>
+        {% empty %}
+        <li>Nenhuma categoria encontrada</li>
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>

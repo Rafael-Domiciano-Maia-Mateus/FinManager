@@ -96,10 +96,12 @@ class LogoutView(View):
 
 
 class Account(LoginRequiredMixin, View):
+  template_name = "account.html"
+
   def get(self, request):
     conta = Users.objects.get(user=request.user)  
     contexto = {
       'conta': conta
     }
-    return render(request, 'account.html', contexto)
+    return render(request, self.template_name, contexto)
     

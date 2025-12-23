@@ -31,11 +31,11 @@ O FinManager tem como propósito oferecer uma plataforma de controle financeiro 
 - Estrutura base do layout com sidebar e dashboard
 - Organização das rotas e apps
 - Tela de perfil
+- Sistema de categorias
 
 ### 🔧 Em desenvolvimento
 
 - Gráficos estatísticos
-- Sistema de categorias
 - API interna (planejada)
 
 ### Futuras melhorias
