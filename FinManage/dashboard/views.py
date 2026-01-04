@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.db.models import Sum
-from django.db.models.functions import Lower
+from django.db.models.functions import Lower, Trim
 from .models import Expense
 
 # Create your views here.
@@ -16,6 +16,13 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     expenses = Expense.objects.filter(user=self.request.user).order_by("-date")
 
     context["expenses"] = expenses
+
+    category_data = (
+      expenses
+      .annotate(cat=Lower(Trim('category')))
+      .values('cat')
+      .annotate(total_amount=Sum('amount'))
+    )
 
     category_data = expenses.values('category').annotate(total_amount=Sum('amount'))
 
