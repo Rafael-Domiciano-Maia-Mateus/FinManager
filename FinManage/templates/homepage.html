@@ -7,47 +7,49 @@
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
   </head>
   <body>
-    <a href="{% url 'LogoutAccount' %}" class="logout-btn">Logout</a>
-    <a href="{% url 'account' %}" class="account-btn">Account</a>
+    <main class="home-main">
+      <h1 class="welcome-title">Welcome Back, {{ request.user.username }} 👋</h1>
+      <p class="subtitle">Here’s a quick overview of your financial activity.</p>
 
-      <main class="home-main">
-        <h1 class="welcome-title">Welcome Back, {{ request.user.username }} 👋</h1>
-        <p class="subtitle">Here’s a quick overview of your financial activity.</p>
+      <section class="summary-grid">
+        <div class="summary-card">
+          <h3>Total Spent This Month</h3>
+          <p class="value">R$ {{ total_month }}</p>
+        </div>
 
-        <section class="summary-grid">
-          <div class="summary-card">
-            <h3>Total Spent This Month</h3>
-            <p class="value">R$ {{ total_month }}</p>
-          </div>
+        <div class="summary-card">
+          <h3>Last Expense</h3>
+          <p class="value">R$ {{ last_expense.amount }}</p>
+        </div>
 
-          <div class="summary-card">
-            <h3>Last Expense</h3>
-            <p class="value">R$ {{ last_expense.amount }}</p>
-          </div>
+        <div class="summary-card">
+          <h3>Total Categories</h3>
+          <p class="value">{{ categories_count }}</p>
+        </div>
+      </section>
 
-          <div class="summary-card">
-            <h3>Total Categories</h3>
-            <p class="value">{{ categories_count }}</p>
-          </div>
-        </section>
+      <section class="action-grid">
+        <a href="{% url 'add_expense' %}" class="action-card">
+          <h2>Add New Expense</h2>
+          <p>Register your latest expense quickly.</p>
+        </a>
 
-        <section class="action-grid">
-          <a href="{% url 'add_expense' %}" class="action-card">
-            <h2>Add New Expense</h2>
-            <p>Register your latest expense quickly.</p>
-          </a>
+        <a href="{% url 'dashboard' %}" class="action-card">
+          <h2>View Dashboard</h2>
+          <p>Visualize your analytics and trends.</p>
+        </a>
 
-          <a href="{% url 'dashboard' %}" class="action-card">
-            <h2>View Dashboard</h2>
-            <p>Visualize your analytics and trends.</p>
-          </a>
+        <a href="{% url 'manageCategories' %}" class="action-card">
+          <h2>Manage Categories</h2>
+          <p>Organize your finance categories easily.</p>
+        </a>
+      </section>
 
-          <a href="{% url 'manageCategories' %}" class="action-card">
-            <h2>Manage Categories</h2>
-            <p>Organize your finance categories easily.</p>
-          </a>
-        </section>
-      </main>
-    </div>
+      <!-- BOTÕES ABAIXO DOS CARDS -->
+      <div class="buttons-container">
+        <a href="{% url 'account' %}" class="account-btn">Account</a>
+        <a href="{% url 'LogoutAccount' %}" class="logout-btn">Logout</a>
+      </div>
+    </main>
   </body>
 </html>
