@@ -27,7 +27,8 @@ if not SECRET_KEY:
     raise ValueError("SECRET_KEY não definida nas variáveis de ambiente")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# ⚠️ Em produção deixe False
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "finmanage.onrender.com",
@@ -39,6 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
 ]
 
+# Necessário para funcionar corretamente atrás do proxy do Render
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
@@ -57,6 +59,10 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    # WhiteNoise → serve arquivos estáticos em produção (Render)
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -142,4 +148,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# Pasta onde o collectstatic junta tudo (obrigatório em produção)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# WhiteNoise: arquivos estáticos comprimidos e versionados
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
