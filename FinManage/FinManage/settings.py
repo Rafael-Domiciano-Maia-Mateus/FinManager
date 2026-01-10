@@ -27,14 +27,19 @@ if not SECRET_KEY:
     raise ValueError("SECRET_KEY não definida nas variáveis de ambiente")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = [
+    "finmanage.onrender.com",
+    ".onrender.com",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://finmanage.onrender.com",
+    "https://*.onrender.com",
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
