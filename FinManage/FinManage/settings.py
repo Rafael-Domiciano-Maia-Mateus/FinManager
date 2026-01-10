@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ys^$l@4a4)w5^92!=v1%3ru&w3vf-2-8!b$!m$5n=#(=^0t52v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['finmanage.com', 'www.finmanage.com']
 
 
 # Application definition
